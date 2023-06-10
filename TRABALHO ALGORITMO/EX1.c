@@ -11,7 +11,7 @@
 
 void main(){
 	
-	float i = 0, altura, sex, contMasc, contFem, maiorAltura, menorAltura = 0, medTurma, medFem, alturaFem, medAlturaTurma;
+	float i = 0, altura = 0, sex = 0, contMasc = 0, contFem = 0, maiorAltura = 0, menorAltura = 0, medTurma = 0, medFem = 0, alturaFem = 0, medAlturaTurma;
 	
 	while (i<3){
 	
@@ -34,19 +34,23 @@ void main(){
 	}
 	if (altura > maiorAltura){
 		maiorAltura = altura;
-	}
-	else 
-		menorAltura = altura;
+	}		
+	if (i == 1) {
+        menorAltura = altura;
+    } else if (altura < menorAltura) {
+        menorAltura = altura;
+    }
+		
 	
 	}
 	
 	medFem = alturaFem / contFem;
 	medAlturaTurma = medTurma / i;
 	 
-	printf("\nQuantidade de homens: %f", contMasc);
-	printf("\nMedia da altura das mulheres: %f", medFem);
-	printf("\nMedia de altura da turma: %f", medAlturaTurma);
-	printf("\nMaior altura da turma: %f", maiorAltura);
-	printf("\nMenor altura da turma: %f", menorAltura);
+	printf("\nQuantidade de homens: %0.1f", contMasc);
+	printf("\nMedia da altura das mulheres: %0.2f", medFem);
+	printf("\nMedia de altura da turma: %0.2f", medAlturaTurma);
+	printf("\nMaior altura da turma: %0.2f", maiorAltura);
+	printf("\nMenor altura da turma: %0.2f", menorAltura);
 	
 }
