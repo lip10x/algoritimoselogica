@@ -13,7 +13,7 @@ void main(){
 	
 	float i = 0, altura = 0, sex = 0, contMasc = 0, contFem = 0, maiorAltura = 0, menorAltura = 0, medTurma = 0, medFem = 0, alturaFem = 0, medAlturaTurma;
 	
-	while (i<3){
+	while (i<=10){
 	
 	printf("Insira a altura: ");
 	scanf("%f", &altura);
